@@ -1,11 +1,12 @@
 "use client"
 
+import 'dotenv/config'
 import { useState } from 'react'
 
 export function Search(){
   const [cidade, setCidade] = useState("")
 
-  const apikey = "FALTA-A-KEY"
+  const apikey = process.env.API_KEY
   
   async function searchContext(e: any){
     e.preventDefault();
